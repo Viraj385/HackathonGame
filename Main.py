@@ -39,6 +39,7 @@ game_over_screen = None
 # Loading in background music
 pygame.mixer.init()
 pygame.mixer.music.load("assets/Mountkid.mp3")
+pygame.mixer.music.set_volume(0.2)
 
 # Reset game
 def reset_game():

@@ -19,7 +19,8 @@
     <header class="navbar">
       <div class="logo">Twisted Wizards</div>
       <nav class="nav-links">
-        <a href="/start-game" class="nav-btn btn-primary">Play</a>
+        <!-- Changed to a button and added an ID for JavaScript -->
+        <button id="playGameButton" class="nav-btn btn-primary">Play</button> 
         <a href="#" class="nav-btn btn-secondary">Instructions</a>
         <a href="#" class="nav-btn btn-outline">Quit</a>
       </nav>
@@ -32,5 +33,31 @@
         <p>Enter the arcane world of chaos and glory. The wizard war awaits.</p>
       </div>
     </main>
+
+    <script>
+      // Javascript handles request to the server
+      document.getElementById('playGameButton').addEventListener('click', async () => {
+          const button = document.getElementById('playGameButton');
+          button.textContent = 'Launching Game...'; // Give user feedback
+          button.disabled = true; // Disable button to prevent multiple clicks
+
+          try { // error try catch
+              // Send get request to server to begin the game
+              const response = await fetch('http://127.0.0.1:8000/start-game');
+              if (response.ok) {
+                  console.log('Successful!');
+              } else { // Error check
+                  console.error('Failed to launch game:', response.statusText);
+                  button.textContent = 'Play';
+                  button.disabled = false; // Re-enables button
+              }
+          } catch (error) {
+              console.error('Error connecting to server:', error);
+              alert('Could not connect.');
+              button.textContent = 'Play';
+              button.disabled = false; // Re-enables button
+          }
+      });
+    </script>
   </body>
 </html>
