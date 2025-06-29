@@ -1,5 +1,5 @@
 # HackathonGame
-Creating a game for Summer Open 2025 Hackathon
+Creating a game for Summer Open 2025 Hackathon in 36 hours
 
 Our Focus:
 We have decided to create a game called **Twisted Wizards**, which is a fighter (street fighter-esque) game, where a wizard (the good user aka you) fights a twisted, shadow wizard (the bad bot) - although this game was short, it is a repeatable fighting game where the user can redo their gameplay as many times as they want to practice against the enemy. It has (maybe) nice music, a cool theme and design, and multiple (just 2), attacks to test - plus basic movement controls. 
