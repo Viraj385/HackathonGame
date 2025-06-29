@@ -1,4 +1,5 @@
 import pygame 
+from Player import Player
 import sys
 pygame.init()
 
@@ -6,9 +7,9 @@ pygame.init()
 width, height = 960, 600
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Twisted Wizards")
-background = pygame.image.load("background.png")
+background = pygame.image.load("assets/background.png")
 background = pygame.transform.scale(background, (width, height))
-
+ground_y = 500
 
 # Colors
 white = (255, 255, 255)
@@ -18,30 +19,31 @@ red = (255, 0, 0)
 clock = pygame.time.Clock()
 gameRunning = True
 
-# Player Basic Setup
-player_size = (50, 50)
-player = pygame.Rect(100, height - 100, *player_size)
-player_color = red
-player_speed = 5
+
+# Player Instances
+player_height = 120
+player1 = Player(50, ground_y - player_height)
 
 while gameRunning:
     # Event Handler
+    clock.tick(60)  # Frame rate
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             gameRunning = False
 
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_LEFT]:
-        player.x -= player_speed
-    if keys[pygame.K_RIGHT]:
-        player.x += player_speed
-
     # Draw 
     screen.blit(background, (0, 0))
-    pygame.draw.rect(screen, player_color, player)
+
+    # Player Movement
+    player1.move(width, ground_y)
+
+    # player2.move()
+
+     # Draw Players
+    player1.draw(screen)
+    # player2.draw(screen)
 
     pygame.display.flip()
-    clock.tick(60)
 
 pygame.quit()
 sys.exit()
