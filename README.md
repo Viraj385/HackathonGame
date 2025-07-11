@@ -4,6 +4,10 @@ Creating a game for Summer Open 2025 Hackathon in 36 hours
 Our Focus:
 We have decided to create a game called **Twisted Wizards**, which is a fighter (street fighter-esque) game, where a wizard (the good user aka you) fights a twisted, shadow wizard (the bad bot) - although this game was short, it is a repeatable fighting game where the user can redo their gameplay as many times as they want to practice against the enemy. It has (maybe) nice music, a cool theme and design, and multiple (just 2), attacks to test - plus basic movement controls. 
 
+After the hackathon, the results were announced, and the game secured first place!
+![Uploading image0.jpeg…]()
+
+
 Synopsis of requirements:
 Background
 You're the creative lead at an indie game studio who just created their first hit game and funding for the next one has just come through. You can build any type of game you want. No genre restrictions. No theme limitations. Just one rule: it must be something that you would play yourself!
