@@ -5,7 +5,8 @@ Our Focus:
 We have decided to create a game called **Twisted Wizards**, which is a fighter (street fighter-esque) game, where a wizard (the good user aka you) fights a twisted, shadow wizard (the bad bot) - although this game was short, it is a repeatable fighting game where the user can redo their gameplay as many times as they want to practice against the enemy. It has (maybe) nice music, a cool theme and design, and multiple (just 2), attacks to test - plus basic movement controls. 
 
 After the hackathon, the results were announced, and the game secured first place!
-![Uploading image0.jpeg…]()
+
+![image0](https://github.com/user-attachments/assets/f8a0843e-0cf6-4017-ac48-9fd01fd9c2f5)
 
 
 Synopsis of requirements:
